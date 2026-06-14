@@ -179,37 +179,36 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .pillar p { font-size: 15px; color: var(--ink-soft); }
 
 /* ---------- featured products strip ---------- */
-.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 
-/* ---------- product card (shared with category pages) ---------- */
-.prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* ---------- product card (compact, image-optional) ---------- */
+.prod-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .prod {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; display: flex; flex-direction: column;
+  padding: 18px; display: flex; gap: 16px; align-items: flex-start;
   transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
 }
-.prod:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--sage); }
-.prod-media {
-  aspect-ratio: 4 / 3; background:
-    radial-gradient(circle at 30% 25%, rgba(138,163,150,.18), transparent 60%),
-    var(--sage-soft);
-  display: grid; place-items: center; position: relative; border-bottom: 1px solid var(--line);
+.prod:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--sage); }
+/* small thumbnail tile — shows an icon by default, or a product photo if you add one */
+.prod-thumb {
+  width: 92px; height: 92px; flex: none; border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at 30% 25%, rgba(138,163,150,.22), transparent 62%), var(--sage-soft);
+  display: grid; place-items: center;
 }
-.prod-media img { width: 100%; height: 100%; object-fit: cover; }
-.prod-media .ph { display: grid; place-items: center; gap: 8px; color: var(--sage); text-align: center; padding: 12px; }
-.prod-media .ph svg { width: 40px; height: 40px; }
-.prod-media .ph span { font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+.prod-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.prod-thumb svg { width: 34px; height: 34px; color: var(--pine); opacity: .85; stroke-width: 1.5; }
+.prod-body { display: flex; flex-direction: column; min-width: 0; }
 .prod-tag {
-  position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,.92);
-  font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
-  color: var(--pine); padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line);
+  align-self: flex-start; background: var(--sage-soft);
+  font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--pine); padding: 4px 9px; border-radius: 999px; margin-bottom: 8px;
 }
-.prod-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
-.prod-body h3 { font-size: 18px; font-weight: 500; line-height: 1.25; margin-bottom: 9px; }
-.prod-why { font-size: 14px; color: var(--ink-soft); margin-bottom: 18px; }
+.prod-body h3 { font-size: 17px; font-weight: 500; line-height: 1.25; margin-bottom: 7px; }
+.prod-why { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 14px; }
 .prod-why b { color: var(--pine); font-weight: 600; }
 .prod-foot { margin-top: auto; }
-.prod .btn { width: 100%; justify-content: center; }
+.btn--sm { padding: 9px 16px; font-size: 14px; }
 
 /* ---------- newsletter / contact ---------- */
 .cta-band { background: var(--pine); color: #EAF1EC; border-radius: 26px; padding: 56px 48px; text-align: center; position: relative; overflow: hidden; }
@@ -460,38 +459,42 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     <div class="feat-grid">
 
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Home &amp; Kitchen</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-1 5H9L8 3Z"/><path d="M9 8v3a3 3 0 0 0 6 0V8M12 14v5M9 21h6"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-1 5H9L8 3Z"/><path d="M9 8v3a3 3 0 0 0 6 0V8M12 14v5M9 21h6"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Home &amp; Kitchen</span>
           <h3>Ninja Blast Portable Blender</h3>
           <p class="prod-why"><b>Why it's here:</b> cordless, genuinely powerful, and small enough to live in a bag — the rare portable blender that crushes ice.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/4ckeP9t" target="_blank" rel="sponsored nofollow noopener">View on Amazon</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/4ckeP9t" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
 
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Home &amp; Kitchen</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Home &amp; Kitchen</span>
           <h3>iSpring RCC7AK Water Filter</h3>
           <p class="prod-why"><b>Why it's here:</b> NSF-certified 6-stage reverse osmosis with a remineralising stage — clean water without the bottled-water cost.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/4upc9Rm" target="_blank" rel="sponsored nofollow noopener">View on Amazon</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/4upc9Rm" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
 
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Electronics</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6zM9 8h6"/><circle cx="12" cy="14" r="2"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6zM9 8h6"/><circle cx="12" cy="14" r="2"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Electronics</span>
           <h3>Oral-B Electric Toothbrush</h3>
           <p class="prod-why"><b>Why it's here:</b> a rechargeable workhorse with a charger included — the easy upgrade most people notice within a week.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://www.amazon.ca/Oral-B-Electric-Toothbrush-Charger-Rechargeable/dp/B0BP69FS5K/" target="_blank" rel="sponsored nofollow noopener">View on Amazon</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://www.amazon.ca/Oral-B-Electric-Toothbrush-Charger-Rechargeable/dp/B0BP69FS5K/" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="prod reveal">
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/></svg></div>
+        <div class="prod-body">
+          <span class="prod-tag">EV &amp; Tesla</span>
+          <h3>SEGUMA Level 2 EV Charger</h3>
+          <p class="prod-why"><b>Why it's here:</b> a faster Level 2 home charge without the dealership markup — top up overnight instead of trickling on 120V.</p>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/3Zs1R5w" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
 

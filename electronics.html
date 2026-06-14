@@ -179,37 +179,36 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .pillar p { font-size: 15px; color: var(--ink-soft); }
 
 /* ---------- featured products strip ---------- */
-.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 
-/* ---------- product card (shared with category pages) ---------- */
-.prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* ---------- product card (compact, image-optional) ---------- */
+.prod-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .prod {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; display: flex; flex-direction: column;
+  padding: 18px; display: flex; gap: 16px; align-items: flex-start;
   transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
 }
-.prod:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--sage); }
-.prod-media {
-  aspect-ratio: 4 / 3; background:
-    radial-gradient(circle at 30% 25%, rgba(138,163,150,.18), transparent 60%),
-    var(--sage-soft);
-  display: grid; place-items: center; position: relative; border-bottom: 1px solid var(--line);
+.prod:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--sage); }
+/* small thumbnail tile — shows an icon by default, or a product photo if you add one */
+.prod-thumb {
+  width: 92px; height: 92px; flex: none; border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at 30% 25%, rgba(138,163,150,.22), transparent 62%), var(--sage-soft);
+  display: grid; place-items: center;
 }
-.prod-media img { width: 100%; height: 100%; object-fit: cover; }
-.prod-media .ph { display: grid; place-items: center; gap: 8px; color: var(--sage); text-align: center; padding: 12px; }
-.prod-media .ph svg { width: 40px; height: 40px; }
-.prod-media .ph span { font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+.prod-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.prod-thumb svg { width: 34px; height: 34px; color: var(--pine); opacity: .85; stroke-width: 1.5; }
+.prod-body { display: flex; flex-direction: column; min-width: 0; }
 .prod-tag {
-  position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,.92);
-  font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
-  color: var(--pine); padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line);
+  align-self: flex-start; background: var(--sage-soft);
+  font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--pine); padding: 4px 9px; border-radius: 999px; margin-bottom: 8px;
 }
-.prod-body { padding: 20px 20px 22px; display: flex; flex-direction: column; flex: 1; }
-.prod-body h3 { font-size: 18px; font-weight: 500; line-height: 1.25; margin-bottom: 9px; }
-.prod-why { font-size: 14px; color: var(--ink-soft); margin-bottom: 18px; }
+.prod-body h3 { font-size: 17px; font-weight: 500; line-height: 1.25; margin-bottom: 7px; }
+.prod-why { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 14px; }
 .prod-why b { color: var(--pine); font-weight: 600; }
 .prod-foot { margin-top: auto; }
-.prod .btn { width: 100%; justify-content: center; }
+.btn--sm { padding: 9px 16px; font-size: 14px; }
 
 /* ---------- newsletter / contact ---------- */
 .cta-band { background: var(--pine); color: #EAF1EC; border-radius: 26px; padding: 56px 48px; text-align: center; position: relative; overflow: hidden; }
@@ -325,69 +324,57 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   <div class="wrap">
     <div class="prod-grid">
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Action cam</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8Z"/><circle cx="12" cy="12.5" r="3.5"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8Z"/><circle cx="12" cy="12.5" r="3.5"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Action cam</span>
           <h3>GoPro HERO11 Black</h3>
           <p class="prod-why"><b>Why we picked it:</b> a bigger sensor and best-in-class stabilisation make this the action cam most people will actually keep using. Our category favourite.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/3xMwbwG" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/3xMwbwG" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Personal care</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6zM9 8h6"/><circle cx="12" cy="14" r="2"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6zM9 8h6"/><circle cx="12" cy="14" r="2"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Personal care</span>
           <h3>Oral-B Electric Toothbrush with Charger</h3>
           <p class="prod-why"><b>Why we picked it:</b> rechargeable, reliable, and the charger's in the box. A low-effort upgrade you notice within days.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://www.amazon.ca/Oral-B-Electric-Toothbrush-Charger-Rechargeable/dp/B0BP69FS5K/" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://www.amazon.ca/Oral-B-Electric-Toothbrush-Charger-Rechargeable/dp/B0BP69FS5K/" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Sim gear</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Sim gear</span>
           <h3>Turtle Beach VelocityOne Flight Control</h3>
           <p class="prod-why"><b>Why we picked it:</b> an all-in-one yoke and throttle system that makes flight sims feel real — a standout for PC and Xbox pilots.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/4h5yMDT" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/4h5yMDT" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Lighting</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.7.7 1 1.4 1 2h6c0-.6.3-1.3 1-2A6 6 0 0 0 12 3Z"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.7.7 1 1.4 1 2h6c0-.6.3-1.3 1-2A6 6 0 0 0 12 3Z"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Lighting</span>
           <h3>Taloya Flush Mount 12" Ceiling Light</h3>
           <p class="prod-why"><b>Why we picked it:</b> a clean, low-profile LED fixture that brightens a room without a renovation. Easy swap, modern look.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/4hhiOGQ" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/4hhiOGQ" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Lighting &middot; value</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.7.7 1 1.4 1 2h6c0-.6.3-1.3 1-2A6 6 0 0 0 12 3Z"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c.7.7 1 1.4 1 2h6c0-.6.3-1.3 1-2A6 6 0 0 0 12 3Z"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Lighting &middot; value</span>
           <h3>Taloya 12" Ceiling Light — 2-Pack</h3>
           <p class="prod-why"><b>Why we picked it:</b> the same fixture in a two-pack with a $10 discount — the sensible buy if you're doing more than one room.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/3YlvHHc" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/3YlvHHc" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
       <article class="prod reveal">
-        <div class="prod-media">
-          <span class="prod-tag">Accessory</span>
-          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span>Add image</span></div>
-        </div>
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
         <div class="prod-body">
+          <span class="prod-tag">Accessory</span>
           <h3>iPhone Screen Protector</h3>
           <p class="prod-why"><b>Why we picked it:</b> cheap insurance for an expensive screen — clear, bubble-resistant, and easy to apply. Buy two.</p>
-          <div class="prod-foot"><a class="btn btn--pine" href="https://amzn.to/3ZrgeXX" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/3ZrgeXX" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
         </div>
       </article>
     </div>
