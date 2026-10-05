@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Books &amp; Media &mdash; SereneGoods</title>
-<meta name="description" content="Curated books and media from Amazon Canada — reads worth your time, hand-picked by SereneGoods.">
+<title>Amazon Finds — SereneGoods</title>
+<meta name="description" content="SereneGoods curates the best of Amazon Canada. We read the reviews and compare the options so you find genuinely worthwhile products across electronics, home, fashion, health, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -307,72 +307,230 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 </head>
 <body>
 
+<!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="SereneGoods home">
-      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg></span>
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg>
+      </span>
       SereneGoods
     </a>
     <nav class="nav-links" id="navlinks" aria-label="Main navigation">
       <a href="index.html#work">Website work</a>
-      <a href="finds.html">Amazon finds</a>
+      <a href="finds.html" aria-current="page">Amazon finds</a>
       <a href="index.html#about">About me</a>
       <a href="index.html#contact">Let’s talk ↗</a>
     </nav>
-    <button class="nav-toggle" id="navtoggle" aria-controls="navlinks" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button class="nav-toggle" id="navtoggle" aria-controls="navlinks" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </header>
 
-<section class="page-band">
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span aria-hidden="true"> / </span><a href="finds.html">Amazon finds</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><span>Books &amp; Media</span>
-    </nav>
-    <span class="eyebrow">Curated category</span>
-    <h1>Books &amp; Media</h1>
-    <p class="lede">Reads and media worth your time — calm, useful, and genuinely worth the shelf space.</p>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Curated Amazon finds · Canada</span>
+      <h1>The best of Amazon, without the <em>endless scroll</em>.</h1>
+      <p class="lede">Our team reads the reviews, compares the options, and keeps only what's genuinely worth buying. Browse by category and shop with confidence.</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#categories">Browse categories
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#how">How we pick</a>
+      </div>
+      <div class="hero-meta">
+        <div class="stat"><span class="num">8</span><span class="lbl">Curated categories</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">Hand-checked picks</span></div>
+        <div class="stat"><span class="num">$0</span><span class="lbl">Extra cost to you</span></div>
+      </div>
+    </div>
+
+    <!-- signature: editor's pick -->
+    <aside class="pick reveal" aria-label="Editor's pick">
+      <span class="tag">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01L12 2Z"/></svg>
+        Editor's pick this week
+      </span>
+      <div class="pick-art" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8a2 2 0 0 1 2-2h2l1.5-2h5L16 6h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8Z"/><circle cx="12" cy="12.5" r="3.5"/></svg>
+      </div>
+      <h3>GoPro HERO11 Black</h3>
+      <p>Larger sensor, sharper stabilisation, and the easiest action cam to actually live with. Our top recommendation for travel and everyday capture.</p>
+      <a class="btn btn--primary" href="https://amzn.to/3xMwbwG" target="_blank" rel="sponsored nofollow noopener">View on Amazon
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </aside>
   </div>
 </section>
 
-<section class="section">
+<!-- ============ CATEGORIES ============ -->
+<section class="section" id="categories">
   <div class="wrap">
-    <div class="prod-grid">
-      <article class="prod reveal">
-        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4a2 2 0 1 1 4 0v2h2a2 2 0 0 1 2 2v2a2 2 0 1 0 0 4v2a2 2 0 0 1-2 2h-2v-2a2 2 0 1 0-4 0v2H8a2 2 0 0 1-2-2v-2a2 2 0 1 1 0-4V8a2 2 0 0 1 2-2h2V4Z"/></svg></div>
-        <div class="prod-body">
-          <span class="prod-tag">Puzzles</span>
-          <h3>Serenity Seekers: Mindfulness Word Puzzles</h3>
-          <p class="prod-why"><b>Why we picked it:</b> a calm, screen-free way to unwind — word puzzles with a mindfulness bent. Quietly on-brand for a serene break.</p>
-          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/3CEgo5j" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
-        </div>
-      </article>
-      <article class="prod reveal" data-trend-date="2026-10-04">
-        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2Z"/><path d="M8 3v16"/></svg></div>
-        <div class="prod-body">
-          <span class="prod-tag">Fiction</span>
-          <h3>Kin by Tayari Jones</h3>
-          <p class="prod-why"><b>Why we picked it:</b> named one of Amazon Editors' top picks of the year so far, this coming-of-age novel set in the Jim Crow South is the literary read generating the most buzz right now.</p>
-          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://www.amazon.ca/s?k=Kin+by+Tayari+Jones&tag=serenegoods-20" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
-        </div>
-      </article>
-      <article class="prod reveal" data-trend-date="2026-10-05">
-        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2Z"/><path d="M8 3v16"/></svg></div>
-        <div class="prod-body">
-          <span class="prod-tag">Fiction</span>
-          <h3>Dead Beat by Leigh Bardugo</h3>
-          <p class="prod-why"><b>Why we picked it:</b> the third Ninth House novel landed at #1 on the New York Times hardcover fiction list this month — if you've been following Alex Stern's story, this is the one everyone's currently reading.</p>
-          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://www.amazon.ca/s?k=Dead+Beat+by+Leigh+Bardugo&tag=serenegoods-20" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
-        </div>
-      </article>
+    <div class="section-head reveal">
+      <span class="eyebrow">Shop by category</span>
+      <h2>Eight aisles, every one curated.</h2>
+      <p class="lede">Each section is a short, opinionated list — only the products we'd actually recommend to a friend.</p>
+    </div>
+    <div class="cat-grid">
+
+      <a class="cat-card reveal" href="electronics.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+        <h3>Electronics &amp; Gadgets</h3>
+        <p>Cameras, audio, smart home</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="home-kitchen.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 12 3l9 6"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg></span>
+        <h3>Home &amp; Kitchen</h3>
+        <p>Appliances, filters, essentials</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="fashion.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 5 7l2 2 1-1v12h8V8l1 1 2-2-4-4-1.5 1.5a2.5 2.5 0 0 1-3 0L9 3Z"/></svg></span>
+        <h3>Fashion &amp; Accessories</h3>
+        <p>Wardrobe staples, extras</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="health-beauty.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg></span>
+        <h3>Health &amp; Beauty</h3>
+        <p>Care, grooming, wellness</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="sports-outdoors.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18M3 12h18"/></svg></span>
+        <h3>Sports &amp; Outdoors</h3>
+        <p>Gear for moving outside</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="toys-games.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="10" rx="3"/><path d="M8 14h2M9 13v2M15 13.5h.01M17 15h.01"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/></svg></span>
+        <h3>Toys &amp; Games</h3>
+        <p>Play that holds up</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="books-media.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h6v18H6a2 2 0 0 1-2-2V5Z"/><path d="M20 5a2 2 0 0 0-2-2h-6v18h6a2 2 0 0 0 2-2V5Z"/></svg></span>
+        <h3>Books &amp; Media</h3>
+        <p>Reads worth your time</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
+      <a class="cat-card reveal" href="ev.html">
+        <span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-5Z"/><path d="M7 16h.01M17 16h.01M11 3l-2 4h3l-1 3"/></svg></span>
+        <h3>Tesla &amp; EV Cars</h3>
+        <p>Accessories &amp; the EV shift</p>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+
     </div>
   </div>
 </section>
 
+<!-- ============ HOW WE PICK ============ -->
+<section class="section pick-band" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our promise</span>
+      <h2>How a product earns a spot.</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <span class="n">Curated</span>
+        <h3>We do the digging</h3>
+        <p>Every featured product is chosen for quality, reviews, and value. If it wouldn't make our own shortlist, it doesn't make the page.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="n">Honest</span>
+        <h3>Straight reviews</h3>
+        <p>Clear notes on what each item is good for — and who it isn't for. No hype, no padding, just enough to decide.</p>
+      </div>
+      <div class="pillar reveal">
+        <span class="n">Fair</span>
+        <h3>No cost to you</h3>
+        <p>As an Amazon Associate we earn a small commission on qualifying purchases. You pay the same price — it just keeps the lights on here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Fresh picks</span>
+      <h2>A few favourites right now.</h2>
+    </div>
+    <div class="feat-grid">
+
+      <article class="prod reveal">
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-1 5H9L8 3Z"/><path d="M9 8v3a3 3 0 0 0 6 0V8M12 14v5M9 21h6"/></svg></div>
+        <div class="prod-body">
+          <span class="prod-tag">Home &amp; Kitchen</span>
+          <h3>Ninja Blast Portable Blender</h3>
+          <p class="prod-why"><b>Why it's here:</b> cordless, genuinely powerful, and small enough to live in a bag — the rare portable blender that crushes ice.</p>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/4ckeP9t" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="prod reveal">
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg></div>
+        <div class="prod-body">
+          <span class="prod-tag">Home &amp; Kitchen</span>
+          <h3>iSpring RCC7AK Water Filter</h3>
+          <p class="prod-why"><b>Why it's here:</b> NSF-certified 6-stage reverse osmosis with a remineralising stage — clean water without the bottled-water cost.</p>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/4upc9Rm" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="prod reveal">
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v16H6zM9 8h6"/><circle cx="12" cy="14" r="2"/></svg></div>
+        <div class="prod-body">
+          <span class="prod-tag">Electronics</span>
+          <h3>Oral-B Electric Toothbrush</h3>
+          <p class="prod-why"><b>Why it's here:</b> a rechargeable workhorse with a charger included — the easy upgrade most people notice within a week.</p>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://www.amazon.ca/Oral-B-Electric-Toothbrush-Charger-Rechargeable/dp/B0BP69FS5K/" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+        </div>
+      </article>
+
+      <article class="prod reveal">
+        <div class="prod-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/></svg></div>
+        <div class="prod-body">
+          <span class="prod-tag">EV &amp; Tesla</span>
+          <h3>SEGUMA Level 2 EV Charger</h3>
+          <p class="prod-why"><b>Why it's here:</b> a faster Level 2 home charge without the dealership markup — top up overnight instead of trickling on 120V.</p>
+          <div class="prod-foot"><a class="btn btn--pine btn--sm" href="https://amzn.to/3Zs1R5w" target="_blank" rel="sponsored nofollow noopener">View on Amazon &rarr;</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section--tight"><div class="wrap"><div class="cta-band">
+  <h2>Have a find worth sharing?</h2>
+  <p>Send me your suggestions or feedback on the collection.</p>
+  <a class="btn btn--primary" href="mailto:hello@serenegoods.ca?subject=A%20find%20for%20SereneGoods">Share a suggestion ↗</a>
+</div></div></section>
+<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <span class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg></span> SereneGoods</span>
+        <span class="brand">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10Z"/></svg></span>
+          SereneGoods
+        </span>
         <p class="foot-about">Calm, curated shopping. We sift through Amazon Canada so you can buy the good things and skip the rest.</p>
       </div>
       <div class="foot-col">
@@ -391,23 +549,31 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <a href="index.html#work">Website work</a>
         <a href="finds.html">Amazon finds</a>
         <a href="about.html">About us</a>
-        <a href="finds.html#how">How we pick</a>
+        <a href="#how">How we pick</a>
         <a href="privacy.html">Privacy policy</a>
         <a href="mailto:hello@serenegoods.ca">Contact us</a>
       </div>
     </div>
-    <div class="disclosure"><strong>Affiliate disclosure:</strong> SereneGoods is a participant in the Amazon Associates Program. As an Amazon Associate we earn from qualifying purchases — at no additional cost to you.</div>
+    <div class="disclosure">
+      <strong>Affiliate disclosure:</strong> SereneGoods is a participant in the Amazon Associates Program. As an Amazon Associate we earn from qualifying purchases — at no additional cost to you.
+    </div>
     <div class="foot-bottom">
-      <span>&copy; <span id="yr"></span> SereneGoods. All rights reserved.</span>
+      <span>© <span id="yr"></span> SereneGoods. All rights reserved.</span>
       <span>Made with care in Ontario, Canada</span>
     </div>
   </div>
 </footer>
 
 <script>
+  // year
   document.getElementById('yr').textContent = new Date().getFullYear();
+  // mobile nav
   var t = document.getElementById('navtoggle'), n = document.getElementById('navlinks');
-  t.addEventListener('click', function () { var open = n.classList.toggle('open'); t.setAttribute('aria-expanded', open); });
+  t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+  // scroll reveal
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: .12 });

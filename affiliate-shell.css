@@ -1,0 +1,9 @@
+/* Connect the existing product pages to the personal homepage. */
+:root{--paper:#f7f5ef;--paper-2:#fcfaf5;--ink:#262923;--ink-soft:#65685f;--pine:#253e32;--pine-deep:#1e3027;--sage-soft:#e8ece0;--honey:#dbab7d;--honey-deep:#bc492b;--line:#dedfd5;--line-soft:#e6e4dc}
+.site-header{background:rgba(247,245,239,.96)}
+.brand{font-family:var(--font-body);font-weight:700;letter-spacing:-.8px}
+.nav-links{gap:13px}.nav-links a{font-size:13px}.nav-links a:last-child{border:1px solid var(--line);border-radius:5px}
+.btn,.cat-card,.prod,.pick{border-radius:7px}.cat-card:hover,.prod:hover{border-color:var(--sage)}
+.reveal{opacity:1;transform:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--honey-deep);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
