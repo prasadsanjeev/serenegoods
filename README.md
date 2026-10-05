@@ -17,7 +17,9 @@ No package installation or build step is required. Publish the repository root o
 
 ## Add portfolio projects
 
-Copy the `<article class="project-card">` inside `.work-grid` in `index.html` and replace its title, description, preview and link with a real project. The current SereneGoods card is labelled as a personal project. For multiple cards, group the articles in a wrapper within `.work-grid`, alongside the services panel.
+The Website Work section features five client sites: QRforLess, Anish & Nisarg, StaffingPro, Cultural Connect Durham, and Velvet Ribbons. Each card links directly to the client’s HTTPS website in a new tab.
+
+To add a project, copy an `<article class="project-card client-project …">` inside `.client-work-grid` in `index.html`, then edit the name, category, description, domain and both links. Keep the card before the `.client-services` panel. Brand cards are typographic project previews, not screenshots. Velvet Ribbons uses a neutral description because its public site currently exposes no readable business details.
 
 The website enquiry links use the existing `hello@serenegoods.ca` address. Update every occurrence if you want enquiries sent elsewhere.
 
