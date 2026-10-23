@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="studio.css?v=redesign-1">
+  <link rel="stylesheet" href="studio.css?v=contact-form-1">
   <script>document.documentElement.classList.add('js')</script>
-  <script src="studio.js" defer></script>
+  <script src="studio.js?v=contact-form-1" defer></script>
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -216,12 +216,47 @@
     </section>
 
     <section class="container reveal" id="contact" aria-labelledby="contact-title"><div class="contact-panel">
-      <div>
+      <div class="contact-intro">
         <p class="eyebrow">Have a project in mind?</p>
         <h2 id="contact-title">Let’s make <em>something good.</em></h2>
-        <p>Tell me a little about your idea. We’ll take it from there.</p>
+        <p>Tell me a little about your idea and I’ll get back to you within two business days.</p>
+        <p class="contact-alt">Prefer email? <a href="mailto:hello@serenegoods.ca">hello@serenegoods.ca</a></p>
       </div>
-      <a class="button light" href="mailto:hello@serenegoods.ca?subject=Let%E2%80%99s%20talk%20about%20my%20website"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Start a conversation</a>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="0bf4846f-70eb-4ca1-a686-47a49095266f">
+        <input type="hidden" name="subject" value="New website enquiry from serenegoods.ca">
+        <input type="hidden" name="from_name" value="SereneGoods website">
+        <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-name">Your name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+            <p class="field-error" id="contact-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="contact-email-error">
+            <p class="field-error" id="contact-email-error"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="contact-type">What do you need?</label>
+          <select id="contact-type" name="project_type">
+            <option>A business website</option>
+            <option>A portfolio or personal site</option>
+            <option>A landing page or redesign</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="contact-message">Tell me about your idea</label>
+          <textarea id="contact-message" name="message" rows="5" required aria-describedby="contact-message-hint contact-message-error"></textarea>
+          <p class="field-hint" id="contact-message-hint">What you do, what the site should help with, and any timing.</p>
+          <p class="field-error" id="contact-message-error"></p>
+        </div>
+        <button class="button light" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> <span class="button-label">Send my request</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div></section>
   </main>
 
