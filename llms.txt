@@ -1,0 +1,31 @@
+# SereneGoods
+
+> SereneGoods (https://www.serenegoods.ca) is the web design and development studio of Sanjeev, a web designer and developer based in Durham Region, Ontario, Canada. Sanjeev designs and builds fast, mobile-first websites for businesses and people, with built-in SEO (search engine optimization), AEO (answer engine optimization) and GEO (generative engine optimization). SereneGoods also curates everyday product finds on Amazon Canada.
+
+## Web design and development
+
+- Location: Durham Region, Ontario, Canada
+- Service area: Ajax, Pickering, Whitby, Oshawa, Clarington, Uxbridge, Scugog, Brock, the Greater Toronto Area (GTA), and remote clients anywhere
+- Services:
+  - Business websites: a clear introduction to what a business does, with enquiry and booking forms
+  - Portfolios and personal websites: custom designs, not templates
+  - Landing pages and website redesigns
+  - Search and AI visibility: SEO, AEO (FAQ and structured data for answer boxes and voice assistants) and GEO (llms.txt and entity-rich content so AI assistants like ChatGPT, Claude and Perplexity can understand, recommend and cite a business)
+  - Custom systems such as a real estate CRM, event ticketing and online tools
+- Process: Listen, Design, Build, Launch and support. Clients work directly with Sanjeev from first conversation to launch.
+- Contact: hello@serenegoods.ca or the enquiry form at https://www.serenegoods.ca/#contact (replies within two business days)
+
+## Client websites
+
+- [QRforLess](https://qrforless.com): QR code generator with custom colours, logos, and PNG or SVG exports. Includes SEO, AEO and GEO work (FAQ and business schema, llms.txt, sitemap).
+- [Anish & Nisarg](https://anishandnisarg.com): Real estate website and CRM system for REALTORS® Anish Gupta and Nisarg Patel. Includes SEO, AEO and GEO work (FAQ and real estate agent schema, llms.txt, sitemap).
+- [StaffingPro](https://thestaffingpro.com): Business website for staffing, IT solutions and project delivery services.
+- [Cultural Connect Durham](https://ccdevents.ca): Event website for Cultural Connect Durham's Garba nights and tickets.
+- [Velvet Ribbons](https://www.velvetribbons.ca): Luxury gift wrapping studio website with occasion collections, corporate gifting and booking enquiries across Durham Region and the GTA.
+
+## Key pages
+
+- [Home: web design in Durham Region](https://www.serenegoods.ca/): services, portfolio, process, FAQ and contact
+- [Amazon finds](https://www.serenegoods.ca/finds.html): curated everyday products on Amazon Canada (affiliate links; SereneGoods earns from qualifying purchases)
+- [About](https://www.serenegoods.ca/about.html)
+- [Privacy policy](https://www.serenegoods.ca/privacy.html)

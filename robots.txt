@@ -1,0 +1,5 @@
+# SereneGoods: search engines and AI assistants are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.serenegoods.ca/sitemap.xml
